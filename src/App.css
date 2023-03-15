@@ -29,6 +29,9 @@
   margin: 10px;
 }
 
+.MuiOutlinedInput-notchedOutline{
+  border-color: #ffffff !important;
+}
 .form>button {
   max-width: 50px;
   margin-top: 10px;

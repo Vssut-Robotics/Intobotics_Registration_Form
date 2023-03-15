@@ -77,6 +77,7 @@ function App() {
           }}
           label="Name"
           required
+          color="warning"
           variant="outlined"
         />
         <TextField
@@ -85,9 +86,12 @@ function App() {
           sx={{ margin: 0.5 }}
           id="outlined-basic"
           label="Branch"
+          color="warning"
+          inputProps={{ style: { fontFamily: 'nunito', color: 'white' } }}
           onChange={(event) => {
             setBranch(event.target.value);
           }}
+          placeholderTextColor="#000" 
           variant="outlined"
         />
         <TextField
@@ -96,6 +100,7 @@ function App() {
           sx={{ margin: 0.5 }}
           id="outlined-basic"
           label="Reg No"
+          color="warning"
           onChange={(event) => {
             setRegno(event.target.value);
           }}
@@ -107,6 +112,7 @@ function App() {
           id="outlined-basic"
           sx={{ margin: 0.5 }}
           label="Email Id"
+          color="warning"
           onChange={(event) => {
             setEmail(event.target.value);
           }}
@@ -117,6 +123,7 @@ function App() {
           className="input"
           id="outlined-basic"
           sx={{ margin: 0.5 }}
+          color="warning"
           label="Phone No"
           onChange={(event) => {
             setPhone(event.target.value);
@@ -129,6 +136,7 @@ function App() {
           id="outlined-basic"
           sx={{ margin: 0.5 }}
           label="Year"
+          color="warning"
           onChange={(event) => {
             setYear(event.target.value);
           }}
