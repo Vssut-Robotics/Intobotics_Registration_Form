@@ -1,38 +1,42 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image:
+    radial-gradient(rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)),
+    url('https://i.imgur.com/v1uFOlD.jpg');
+  height: 100vh;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.App-link {
-  color: #61dafb;
+.form {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.form>img {
+  margin-bottom: 10px;
+}
+
+.form>input {
+  margin: 10px;
+}
+
+.form>button {
+  max-width: 50px;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 768px) {
+
+  .form {
+    width: 70%;
   }
 }
