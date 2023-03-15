@@ -34,13 +34,20 @@ function App() {
 
   const createUser = async () => {
     if (
-      (name == null || name == "") ||
-      (branch == null || branch == "") ||
-      (regno == null || regno == "") ||
-      (email == null || email == "") ||
-      (phone == null || phone == "") ||
-      (year == null || year == "") ||
-      (email == null || email == "")
+      name == null ||
+      name == "" ||
+      branch == null ||
+      branch == "" ||
+      regno == null ||
+      regno == "" ||
+      email == null ||
+      email == "" ||
+      phone == null ||
+      phone == "" ||
+      year == null ||
+      year == "" ||
+      email == null ||
+      email == ""
     ) {
       alert("Please Fill In All Required Fields");
       return false;
