@@ -69,21 +69,24 @@ function App() {
       <div className="form">
         <img src="https://i.imgur.com/twT3QYh.png" alt="" />
         <TextField
-          className="input"
-          sx={{ margin: 0.5 }}
-          id="outlined-basic"
-          onChange={(event) => {
-            setName(event.target.value);
+          required
+          className="inputField"
+          sx={{
+            margin: 0.5,
+            color: "white",
           }}
           InputLabelProps={{
             sx: {
               color: "white",
             },
           }}
+          id="outlined-basic"
           label="Name"
-          required
-          place
           color="warning"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
           variant="outlined"
         />
         <TextField
@@ -110,7 +113,7 @@ function App() {
         <TextField
           required
           className="input"
-          sx={{ margin: 0.5 }}
+          sx={{ margin: 0.5, color: "white" }}
           id="outlined-basic"
           label="Reg No"
           InputLabelProps={{
@@ -119,6 +122,7 @@ function App() {
             },
           }}
           color="warning"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setRegno(event.target.value);
           }}
@@ -128,7 +132,7 @@ function App() {
           required
           className="input"
           id="outlined-basic"
-          sx={{ margin: 0.5 }}
+          sx={{ margin: 0.5, color: "white" }}
           InputLabelProps={{
             sx: {
               color: "white",
@@ -136,6 +140,7 @@ function App() {
           }}
           label="Email Id"
           color="warning"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setEmail(event.target.value);
           }}
@@ -153,6 +158,7 @@ function App() {
           }}
           color="warning"
           label="Phone No"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setPhone(event.target.value);
           }}
@@ -162,7 +168,7 @@ function App() {
           required
           className="input"
           id="outlined-basic"
-          sx={{ margin: 0.5 }}
+          sx={{ margin: 0.5,color: "white", }}
           InputLabelProps={{
             sx: {
               color: "white",
@@ -170,6 +176,7 @@ function App() {
           }}
           label="Year"
           color="warning"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setYear(event.target.value);
           }}
