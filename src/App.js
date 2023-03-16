@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { db } from "./firebase-config";
-import { TextField, Button, FormControl } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -132,7 +132,7 @@ function App() {
           }}
           variant="outlined"
         />
-        <FormControl
+        <TextField
           required
           className="input"
           id="outlined-basic"
@@ -165,8 +165,11 @@ function App() {
           }}
           color="warning"
           label="Phone No"
-          type={"number"}
-          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
+          inputProps={{
+            style: { fontFamily: "nunito", color: "white" },
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+          }}
           onChange={(event) => {
             setPhone(event.target.value);
           }}
