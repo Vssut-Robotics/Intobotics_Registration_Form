@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { db } from "./firebase-config";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, FormControl } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -62,7 +62,7 @@ function App() {
         Regno: regno,
         Year: year,
         email: email,
-        Desc:desc
+        Desc: desc,
       });
       handleOpen();
     }
@@ -132,7 +132,7 @@ function App() {
           }}
           variant="outlined"
         />
-        <TextField
+        <FormControl
           required
           className="input"
           id="outlined-basic"
@@ -144,8 +144,10 @@ function App() {
           }}
           label="Email Id"
           color="warning"
-          type={"email"}
-          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
+          inputProps={{
+            style: { fontFamily: "nunito", color: "white" },
+            inputMode: "email",
+          }}
           onChange={(event) => {
             setEmail(event.target.value);
           }}
@@ -174,7 +176,7 @@ function App() {
           required
           className="input"
           id="outlined-basic"
-          sx={{ margin: 0.5,color: "white", }}
+          sx={{ margin: 0.5, color: "white" }}
           InputLabelProps={{
             sx: {
               color: "white",
@@ -192,7 +194,7 @@ function App() {
           required
           className="input"
           id="outlined-basic"
-          sx={{ margin: 0.5,color: "white", }}
+          sx={{ margin: 0.5, color: "white" }}
           InputLabelProps={{
             sx: {
               color: "white",
