@@ -34,6 +34,10 @@ function App() {
   const usersCollectionRef = collection(db, "users");
 
   const createUser = async () => {
+    const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    if (!regEx.test(email) && email !== "") {
+      alert("Please Email field properly");
+    }
     if (
       name == null ||
       name == "" ||
