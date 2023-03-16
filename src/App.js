@@ -28,6 +28,7 @@ function App() {
   const [phone, setPhone] = useState("");
   const [year, setYear] = useState("");
   const [open, setOpen] = useState(false);
+  const [desc, setDesc] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const usersCollectionRef = collection(db, "users");
@@ -47,7 +48,9 @@ function App() {
       year == null ||
       year == "" ||
       email == null ||
-      email == ""
+      email == "" ||
+      desc == null ||
+      desc == ""
     ) {
       alert("Please Fill In All Required Fields");
       return false;
@@ -59,6 +62,7 @@ function App() {
         Regno: regno,
         Year: year,
         email: email,
+        Desc:desc
       });
       handleOpen();
     }
@@ -140,6 +144,7 @@ function App() {
           }}
           label="Email Id"
           color="warning"
+          type={"email"}
           inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setEmail(event.target.value);
@@ -158,6 +163,7 @@ function App() {
           }}
           color="warning"
           label="Phone No"
+          type={"number"}
           inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setPhone(event.target.value);
@@ -179,6 +185,24 @@ function App() {
           inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
           onChange={(event) => {
             setYear(event.target.value);
+          }}
+          variant="outlined"
+        />
+        <TextField
+          required
+          className="input"
+          id="outlined-basic"
+          sx={{ margin: 0.5,color: "white", }}
+          InputLabelProps={{
+            sx: {
+              color: "white",
+            },
+          }}
+          label="Why you want to join. Describe in one line"
+          color="warning"
+          inputProps={{ style: { fontFamily: "nunito", color: "white" } }}
+          onChange={(event) => {
+            setDesc(event.target.value);
           }}
           variant="outlined"
         />
